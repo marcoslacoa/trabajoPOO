@@ -7,15 +7,14 @@ public class CuentaBancaria {
     double ultimoMovimiento;
     String input;
 
-
     // constructor con parametro nombre y dni
 
     public CuentaBancaria(String nombreCliente, String dniCliente) {
         this.nombreCliente = nombreCliente;
         this.dniCliente = dniCliente;
     }
-    // constructor con parametro todos excepto $ultimoMovimiento
 
+    // constructor con parametro todos excepto $ultimoMovimiento
 
     public CuentaBancaria(String nombreCliente, String dniCliente, double saldo) {
         this.nombreCliente = nombreCliente;
@@ -28,6 +27,7 @@ public class CuentaBancaria {
     ultimoMovimiento=0+cantidad;
 
     }
+
     public void retirar(double cantidad){
         saldo-=cantidad;
         ultimoMovimiento=0-cantidad;
@@ -45,6 +45,7 @@ public class CuentaBancaria {
             System.out.println("No se han realizado transacciones");
         }
     }
+
     public void mostrarMenu(){
         do  {
             input = JOptionPane.showInputDialog("Bienvenido " + nombreCliente + "\n" + "Ingrese una opción: " + "\n" +
