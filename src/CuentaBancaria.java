@@ -50,6 +50,10 @@ public class CuentaBancaria {
             input = JOptionPane.showInputDialog("Bienvenido " + nombreCliente + "\n" + "Ingrese una opción: " + "\n" +
                     "OPCIÓN A: Consultar saldo" + "\n" + "OPCIÓN B: Depositar " + "\n" + "OPCIÓN C: Retirar " + "\n" +
                     "OPCIÓN D: Consultar último movimiento " + "\n" + "OPCIÓN E: Salir ");
+
+            // Convertir la entrada a mayúscula
+            input = input.toUpperCase();
+
             switch (input) {
                 case "A":
                     System.out.println("El saldo es de: " + saldo);
@@ -73,6 +77,5 @@ public class CuentaBancaria {
                     break;
             }
         } while (input.equalsIgnoreCase("E")==false);
-
     }
 }
